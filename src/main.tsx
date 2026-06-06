@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Toaster } from '@/components/ui/sonner'
 import './index.css'
 import SessionPage from './pages/SessionPage'
 import AdminPage from './pages/AdminPage'
@@ -20,5 +21,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <Toaster richColors position="bottom-center" />
   </StrictMode>,
 )
